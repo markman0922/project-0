@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 450px;
+  margin: 20px 40px;
+  max-height: 450px;
+}
+
+.col-sm-8 {
+  width: 46%;
+}
+
+.btn-success {
+  margin-left: 750px;
+  position: fixed;
+}
