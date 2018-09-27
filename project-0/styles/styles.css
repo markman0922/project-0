@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 16px;
+  transition: width .4s ease-in;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 5;
+  position: fixed;
+  margin-bottom: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  margin: 1rem;
+  padding: 1rem;
+  color: #000;
+}
+
+
+.hero-container h1 {
+  padding-top: 5%;
+  text-align: center;
+  font-size: 4rem;
+  color: #FFF;
+}
+
+.hero-container {
+  background-image: url(../images/city.jpeg);
+  opacity: 0.9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 80vh;
+}
+
+main h1 {
+  text-align: center;
+}
+
+#about {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2rem;
+  height: auto;
+}
+
+.icon-block {
+  width: 30.333%;
+}
+
+.icon-block h2 {
+  font-size: 3em;
+}
+
+.icon-block h5 {
+  font-size: 20px;
+}
+
+.icon-block p {
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.portfolio-background {
+  background-image: url(../images/code.jpg);
+  opacity: 0.9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 60vh;
+}
+
+.portfolio-background h1 {
+  padding-top: 10%;
+  text-align: center;
+  font-size: 4rem;
+  color: #FFF;
+}
+
+.portfolio-content {
+  text-align: center;
+  padding: 20px;
+  height: auto;
+}
+
+.contact-background {
+  background-image: url(../images/skateboarding.jpg);
+  opacity: 0.9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 60vh;
+}
+
+.contact-background h1 {
+  padding-top: 10%;
+  text-align: center;
+  font-size: 4rem;
+  color: #FFF;
+}
+
+.contact-content {
+  min-height: 40vh;
+}
+
+.contact-content h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  clear: both;
+  padding-top: 2rem;
+}
+
+.contact-content input {
+  margin: 10px auto;
+  width: 50%;
+  clear: both;
+}
+
+footer {
+  text-align: center;
+  background-color: #202020;
+  margin: 0;
+  padding: 0;
+}
+
+footer p {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 2rem;
+}
+
+footer a {
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: #FFFFFF;
+}
