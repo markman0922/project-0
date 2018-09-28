@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="images/Mark.png">
   <link rel="stylesheet" href="styles/normalize.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:300,400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400" rel="stylesheet">
+  <link rel="stylesheet" href="styles/carousel.css">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/jquery.js"></script>
   <script src="scripts/app.js"></script>
@@ -14,7 +16,7 @@
 </head>
 <body>
   <header id="home">
-    <nav>
+    <nav class="hamburger">
       <div class="nav-row">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -27,15 +29,16 @@
     <section>
       <div class="hero-container">
         <h1>Mark Mandell</h1>
-        <h1>Full Stack Web Developer</h1>
+        <h2>Full Stack Web Developer</h2>
       </div>
     </section>
   </header>
-    <main class="content">
-      <section id="about">
-        <h1>About Me</h1>
-      <div class="container">
-        <div class="row">
+  <main class="content">
+    <section id="about">
+      <h1>About Me</h1>
+    <div class="container">
+      <div class="row">
+        <div class="flex-wrap">
           <div class="icon-block">
             <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i><h2>
               <h5>Education</h5>
@@ -47,6 +50,8 @@
                 </a>.
               </p>
           </div>
+        <!-- </div> -->
+        <!-- <div class="flex-wrap"> -->
           <div class="icon-block">
             <h2><i class="fa fa-code" aria-hidden="true"></i></h2>
             <h5>Skills</h5>
@@ -55,46 +60,119 @@
               In addition, I have some experience building web applications in React.
             </p>
           </div>
+        <!-- </div> -->
+        <!-- <div class="flex-wrap"> -->
           <div class="icon-block">
             <h2><i class="fa fa-thumbs-up" aria-hidden="true"></i></h2>
             <h5>Interests</h5>
             <p>Some of my passions include skateboarding, playing the guitar, reading, and exploring the outdoors!</p>
           </div>
+      </div>
+      </div>
+    </div>
+    </section>
+    <section id="projects">
+      <div class="portfolio-background">
+        <h1>Portfolio</h1>
+      </div>
+
+      <!-- Carousel Section -->
+      <div class="portfolio-content">
+        <div class="container">
+        <div class="carousel">
+          <div class="carousel-nav">
+           <span id="moveLeft" class="carousel-arrow">
+              <svg class="carousel-icon" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+              </svg>
+            </span>
+            <span id="moveRight" class="carousel-arrow" >
+              <svg class="carousel-icon"  width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="carousel-item carousel-item-1">
+            <div class="carousel-item-image"></div>
+            <div class="carousel-item-info">
+              <div class="carousel-item-container">
+                <h2 class="carousel-item-subtitle">Bootstrap, JavaScript, Google Maps API </h2>
+                <h1 class="carousel-item-title">Skate Scout</h1>
+                <p class="carousel-item-description">Users can upload their favorite skateparks and pin the location using Google Maps. Users can edit their parks and comment on other users posts. </p>
+                <a href="http://skatescout.herokuapp.com" class="carousel-item__btn">Look for skate parks</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-item-2">
+            <div class="carousel-item-image"></div>
+            <div class="carousel-item-info">
+              <div class="carousel-item-container">
+                <h2 class="carousel-item-subtitle">JavaScript, jQuery, AJAX, Google Maps API </h2>
+                <h1 class="carousel-item-title">Geoquake</h1>
+                <p class="carousel-item-description">A web application that tracks and locates earthquakes that have occurred around the world.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-item-3">
+            <div class="carousel-item-image"></div>
+            <div class="carousel-item-info">
+              <div class="carousel-item-container">
+                <h2 class="carousel-item-subtitle">HTML, CSS </h2>
+                <h1 class="carousel-item-title">Monument Magazine</h1>
+                <p class="carousel-item-description">A website built for Monument Magazine. Completed during General Assembly's Web Development Immersive.</p>
+              </div>
+            </div>
+          </div>
+           <div class="carousel-item carousel-item-4">
+            <div class="carousel-item-image"></div>
+            <div class="carousel-item-info">
+              <div class="carousel-item-container">
+                <h2 class="carousel-item-subtitle">React </h2>
+                <h1 class="carousel-item-title">Weather App </h1>
+                <p class="carousel-item-description">A web application built in React that utilizes a weather API and renders the data as a set of graphs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-item-5">
+            <div class="carousel-item-image"></div>
+            <div class="carousel-item-info">
+              <div class="carousel-item-container">
+                <h2 class="carousel-item-subtitle">React, Google OAuth, Stripe API, SendGrid API</h2>
+                <h1 class="carousel-item-title">React Surveys</h1>
+                <p class="carousel-item-description">Users log in using Google's OAuth, buy survey credits using Stripe's API, and send the research questions to recipients via SendGrid.</p>
+                <a href="http://marksurvey.herokuapp.com" class="carousel-item-btn">Send some surveys</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      </section>
-      <section id="projects">
-        <div class="portfolio-background">
-          <h1>Portfolio</h1>
-        </div>
-        <div class="portfolio-content">
-          <h1>Projects</h1>
-          <img src="https://picsum.photos/500/500/?random" alt="">
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact">
-        <div class="contact-background">
-          <h1>Contact</h1>
-        </div>
-        <div class="contact-content">
-          <h2>Send me an email!</h2>
-          <form action="#">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Subject">
-            <input type="number" placeholder="Phone Number">
-            <input type="submit" placeholder="Send">
-          </form>
-        </div>
-      </section>
-    </main>
+    <section id="contact">
+      <div class="contact-background">
+        <h1>Contact</h1>
+      </div>
+      <div class="contact-content">
+        <h2>Send me an email!</h2>
+        <form action="#">
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <input type="number" placeholder="Phone Number">
+          <textarea name="message" rows="8" cols="80" placeholder="Message"></textarea>
+          <input type="submit" placeholder="Send">
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <a href="#"><i class="fa fa-facebook-square"></i></a>
-    <a href="#"><i class="fa fa-instagram"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-github"></i></a>
+    <div class="social-icons">
+      <a href="#"><i class="fa fa-facebook-square"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+    </div>
     <p>&copy; By Mark Mandell</p>
   </footer>
 
