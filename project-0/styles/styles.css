@@ -36,7 +36,8 @@ nav {
 .animate {
   color: #000;
   background-color: #FFF;
-  height: 100px;
+  height: 5rem;
+  text-shadow: none;
 }
 
 nav ul {
@@ -63,8 +64,13 @@ nav a.animate {
   background-color: transparent;
 }
 
+.hamburger {
+  display: none;
+}
+
 .hero-container h1 {
-  padding-top: 15%;
+  text-shadow: 1px 1px #000;
+  padding-top: 18%;
   text-align: center;
   font-size: 3.4rem;
   color: #FFF;
@@ -72,6 +78,7 @@ nav a.animate {
 }
 
 .hero-container h2 {
+  text-shadow: 1px 1px #000;
   text-align: center;
   font-size: 3rem;
   color: #FFF;
@@ -91,7 +98,7 @@ nav a.animate {
   font-size: 18px;
   width: 100%;
   text-align: center;
-  padding-bottom: 2rem;
+  padding: 3rem;
   height: auto;
 }
 
@@ -198,6 +205,24 @@ form {
   clear: both;
 }
 
+.error {
+	display: none;
+	margin-left: 10px;
+}
+
+.error-show {
+	color: red;
+	margin-left: 10px;
+}
+
+input.invalid, textarea.invalid {
+	border: 2px solid red;
+}
+
+input.valid, textarea.valid {
+	border: 2px solid green;
+}
+
 footer {
   text-align: center;
   background-color: #202020;
@@ -218,6 +243,36 @@ footer a {
 }
 
 @media only screen and (max-width: 760px) {
+
+  .hamburger {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #FFF;
+  }
+
+  .hamburger.animate {
+    color: #000;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 10%;
+  }
+
+  nav a {
+    color: #FFF;
+    display: none;
+    font-size: 14px;
+  }
+
+  .hero-container h1 {
+    padding-top: 5em;
+  }
 
   .icon-block {
     width: 85%;

@@ -194,6 +194,29 @@
   transform: translateX(0);
 }
 
+@media only screen and (max-width: 768px) {
+
+  .carousel {
+    justify-content: center;
+  }
+
+  .carousel-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-item-info {
+    text-align: center;
+    width: 100%;
+  }
+
+  .carousel-item-image {
+    width: 100%;
+  }
+
+}
+
 @media only screen and (max-width: 580px) {
 
   .carousel {
