@@ -53,8 +53,32 @@ $('document').ready(function() {
     }
   });
 
-  $('lightbox-trigger').on('click', function(e) {
+  $('.lightbox-trigger').on('click', function(e) {
     e.preventDefault();
+    var imageUrl = $(this).attr("href");
+    if ($('#lightbox').length > 0) { // #lightbox exists
+    	//insert img tag with clicked link's href as src value
+    	$('#content').html('<img src="' + imageUrl + '" />');
+
+    	//show lightbox window - you can use a transition here if you want, i.e. .show('fast')
+    	$('#lightbox').show();
+    } else { //#lightbox does not exist
+    	//create HTML markup for lightbox window
+    	var lightbox =
+    	'<div id="lightbox">' +
+    		'<p>Click to close</p>' +
+    		'<div id="content">' + //insert clicked link's href into img src
+    			'<img src="' + imageUrl +'" />' +
+    		'</div>' +
+    	'</div>';
+
+    	//insert lightbox HTML into page
+    	$('body').append(lightbox);
+    }
+  });
+
+  $(document).on('click', '#lightbox', function() {
+	   $('#lightbox').hide();
   });
 
   $('#contact-name').on('input', function() {
@@ -67,7 +91,7 @@ $('document').ready(function() {
     }
   });
 
-  $('#contact-email').on('input', function() {
+  $('#contact-email').on('input', function(e) {
     var input = $(this);
   	var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   	var isEmail = re.test(input.val());
