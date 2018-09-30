@@ -53,6 +53,10 @@ $('document').ready(function() {
     }
   });
 
+  $('lightbox-trigger').on('click', function(e) {
+    e.preventDefault();
+  });
+
   $('#contact-name').on('input', function() {
     var input = $(this);
   	var isName = input.val();
