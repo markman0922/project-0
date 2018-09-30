@@ -18,10 +18,6 @@ body {
   width: 90%;
 }
 
-a {
-  text-decoration: none;
-}
-
 nav {
   height: 0px;
   transition: all 0.5s ease;
@@ -31,6 +27,11 @@ nav {
   z-index: 9;
   position: fixed;
   margin-bottom: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .animate {
@@ -60,8 +61,17 @@ nav a {
   color: #000;
 }
 
+nav a:hover {
+  border-bottom: 1px solid #000;
+  color: #FFF;
+}
+
 nav a.animate {
   background-color: transparent;
+}
+
+nav a.animate:hover {
+  color: grey;
 }
 
 .hamburger {
@@ -101,10 +111,6 @@ nav a.animate {
   padding: 3rem;
   height: auto;
 }
-
-/* .row {
-  width: 100%;
-} */
 
 .flex-wrap {
   display: flex;
@@ -266,6 +272,11 @@ footer a {
   color: #FFFFFF;
 }
 
+footer a:hover {
+  color: grey;
+}
+
+
 @media only screen and (max-width: 760px) {
 
   .hamburger {
@@ -281,6 +292,10 @@ footer a {
     color: #000;
   }
 
+  .hamburger:hover {
+    border-bottom: none;
+  }
+
   nav ul {
     display: flex;
     flex-direction: row;
@@ -292,6 +307,33 @@ footer a {
     color: #FFF;
     display: none;
     font-size: 14px;
+  }
+
+  .drop-down {
+    height: 0;
+  }
+
+  .drop-down.active {
+    height: auto;
+    display: flex;
+    padding: 2rem;
+    font-size: 1rem;
+    background-color: #FFF;
+  }
+
+  .drop-down.active li {
+    border-bottom: 1px solid #000;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .drop-down.active li:last-child {
+    border-bottom: none;
+  }
+
+  .drop-down.active li a:hover {
+    color: grey;
+    border-bottom: none;
   }
 
   .hero-container h1 {

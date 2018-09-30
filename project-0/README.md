@@ -12,9 +12,9 @@ First Project for General Assembly's Web Development Immersive
  * Styled smaller details, working on errors with form/hamburger nav/carousel
 
 # Unsolved Problems
- * Carousel lightbox
  * Hamburger nav drop-down menu interferes with navbar css, need to implement functionality
  * Carousel does not automatically cycle
+ * Improve styling
  * Form validation bugs, error `<span>` for each input not rendering
  * Testimonials section
  * Implement an API

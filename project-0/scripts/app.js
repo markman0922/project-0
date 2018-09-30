@@ -1,13 +1,19 @@
-
 $('document').ready(function() {
-  $('nav a').on('click', function(e) {
+  $('.nav-row a').on('click', function(e) {
     e.preventDefault();
     var navTarget = $(this).attr('href');
     var targetOffset = $(navTarget).offset().top;
+
     $('html').animate({
       scrollTop: targetOffset
     }, 800);
   });
+
+  // $('.drop-down').hide();
+  //
+  // $('.hamburger i').on('click', function() {
+  //   $('.drop-down').show().toggleClass('active');
+  // });
 
   $(window).scroll(function() {
     if($(window).scrollTop() >= 100) {
@@ -57,22 +63,22 @@ $('document').ready(function() {
     e.preventDefault();
     var imageUrl = $(this).attr("href");
     if ($('#lightbox').length > 0) { // #lightbox exists
-    	//insert img tag with clicked link's href as src value
+    	// insert img tag with clicked link's href as src value
     	$('#content').html('<img src="' + imageUrl + '" />');
 
-    	//show lightbox window - you can use a transition here if you want, i.e. .show('fast')
+    	// show lightbox window
     	$('#lightbox').show();
-    } else { //#lightbox does not exist
-    	//create HTML markup for lightbox window
+    } else { // #lightbox does not exist
+    	// create HTML for lightbox window
     	var lightbox =
     	'<div id="lightbox">' +
     		'<p>Click to close</p>' +
-    		'<div id="content">' + //insert clicked link's href into img src
+    		'<div id="content">' + // insert clicked link's href into img src
     			'<img src="' + imageUrl +'" />' +
     		'</div>' +
     	'</div>';
 
-    	//insert lightbox HTML into page
+    	// insert lightbox HTML into page
     	$('body').append(lightbox);
     }
   });
@@ -146,6 +152,4 @@ $('document').ready(function() {
       }
     };
   });
-
-
 });
