@@ -78,6 +78,10 @@ nav a.animate:hover {
   display: none;
 }
 
+.dropdown {
+  display: none;
+}
+
 .hero-container h1 {
   text-shadow: 1px 1px #000;
   padding-top: 18%;
@@ -292,48 +296,33 @@ footer a:hover {
     color: #000;
   }
 
+   ul.normal {
+    display: none;
+  }
+
   .hamburger:hover {
     border-bottom: none;
   }
 
-  nav ul {
+  nav ul.dropdown {
+    background-color: #FFF;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-right: 10%;
+    flex-direction: column;
+    margin: 0;
+    padding: 4rem;
   }
 
-  nav a {
-    color: #FFF;
-    display: none;
+  .dropdown nav li {
+    padding: 1rem;
+  }
+
+  .dropdown nav a {
+    color: #000;
     font-size: 14px;
   }
 
-  .drop-down {
-    height: 0;
-  }
-
-  .drop-down.active {
-    height: auto;
-    display: flex;
-    padding: 2rem;
-    font-size: 1rem;
-    background-color: #FFF;
-  }
-
-  .drop-down.active li {
-    border-bottom: 1px solid #000;
-    margin: 0;
-    padding: 10px;
-  }
-
-  .drop-down.active li:last-child {
-    border-bottom: none;
-  }
-
-  .drop-down.active li a:hover {
+  .dropdown nav a:hover {
     color: grey;
-    border-bottom: none;
   }
 
   .hero-container h1 {

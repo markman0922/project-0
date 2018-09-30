@@ -9,11 +9,11 @@ $('document').ready(function() {
     }, 800);
   });
 
-  // $('.drop-down').hide();
-  //
-  // $('.hamburger i').on('click', function() {
-  //   $('.drop-down').show().toggleClass('active');
-  // });
+  $('.dropdown').hide();
+
+  $('.hamburger i').on('click', function() {
+    $('.dropdown').slideToggle('ul');
+  });
 
   $(window).scroll(function() {
     if($(window).scrollTop() >= 100) {
